@@ -1,204 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Shower Presentation Engine</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
-    <style>
-        .shower {
-            --slide-ratio: calc(16 / 9);
-        }
-    </style>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+  <style>
+    .shower {
+      --slide-ratio: calc(16 / 9);
+    }
+
+    .slide--bs {
+      background-image: url('./pictures/binary-studio-logo.svg');
+      background-repeat: no-repeat;
+      background-position: right 20px bottom 25px;
+      background-size: 75px;
+    }
+
+    .slide--htmlacademy {
+      background-image: url('./pictures/htmlacademy-logo.svg');
+      background-repeat: no-repeat;
+      background-position: right 20px bottom 25px;
+      background-size: 30px;
+    }
+
+    .bottom-link {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 13px;
+      }
+  </style>
 </head>
 <body class="shower list">
 
-    <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
-    </header>
+  <header class="caption">
+    <h1>Deno</h1>
+    <p>Truthful server-side JavaScript</p>
+  </header>
 
-    <section class="slide" id="cover">
-        <h2>Shower Presentation Engine</h2>
-        <p>Brought to you by <a href="https://pepelsbey.net">Vadim Makeev</a></p>
-        <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-            <figcaption class="copyright right white">
-                <a href="https://fiftyfootshadows.net">© John Carey</a>
-            </figcaption>
-        </figure>
-        <style>
-            #cover h2 {
-                margin: 30px 0 0;
-                color: white;
-                text-align: center;
-                font-size: 70px;
-            }
+  <section class="slide" id="cover">
+    <h2 class="cover__title">Deno</h2>
+    <p><b>Truthful</b> server-side JavaScript.</p>
+    <p class="copyright right">
+      <a href="https://whatislove.dev/" target="_blank" rel="noreferrer">© Vladyslav Zubko</a>
+    </p>
 
-            #cover p {
-                margin: 10px 0 0;
-                text-align: center;
-                color: white;
-                font-style: italic;
-                font-size: 20px;
-            }
+    <style>
+      #cover {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-            #cover p a {
-                color: white;
-            }
-        </style>
-    </section>
+      #cover .cover__title {
+        margin: 150px 0 0;
+        text-align: center;
+      }
+    </style>
+  </section>
 
-    <section class="slide">
-        <h2>Shower key features</h2>
-        <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
-        </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-    </section>
+  <section class="slide slide--bs" id="who">
+    <h2 class="who__title">Who I am</h2>
+    <p class="who__position">
+      <a class="who__position-link" href="https://binary-studio.com/" target="_blank" rel="noreferrer">BinaryStudio </a>
+      ❤️ JavaScript Developer
+    </p>
 
-    <section class="slide">
-        <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-    </section>
+    <style>
+      #who {
+        display: flex;
+        flex-direction: column;
+      }
 
-    <section class="slide">
-        <h2>Two columns if you like</h2>
-        <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-        </div>
-    </section>
+      #who .who__title {
+        margin: 30px 0 0;
+        font-size: 50px;
+      }
 
-    <section class="slide">
-        <h2>All kind of lists</h2>
-        <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
-                <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
-                </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
-        </ol>
-    </section>
+      #who .who__position {
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0 0 0 50px;
+      }
 
-    <section class="slide">
-        <h2>Serious citations</h2>
-        <figure>
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
-        </figure>
-    </section>
+      #who .who__position::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 80%;
+        content: '';
+        background-color: #000000;
+      }
 
-    <section class="slide">
-        <h2>Code samples</h2>
-        <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
-        </pre>
-    </section>
+      #who .who__position::after {
+        position: absolute;
+        bottom: 30px;
+        left: -7.5px;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96.154px' height='96.154px' viewBox='0 0 96.154 96.154'%3E%3Cpath d='M0.561,20.971l45.951,57.605c0.76,0.951,2.367,0.951,3.127,0l45.956-57.609c0.547-0.689,0.709-1.716,0.414-2.61 c-0.061-0.187-0.129-0.33-0.186-0.437c-0.351-0.65-1.025-1.056-1.765-1.056H2.093c-0.736,0-1.414,0.405-1.762,1.056 c-0.059,0.109-0.127,0.253-0.184,0.426C-0.15,19.251,0.011,20.28,0.561,20.971z'/%3E%3C/svg%3E%0A");
+        background-size: cover;
+      }
 
-    <section class="slide">
-        <h2>Even tables</h2>
-        <table>
-        <tr>
-            <th scope="col">Locavore</th>
-            <th>Umami</th>
-            <th>Helvetica</th>
-            <th>Vegan</th>
-        </tr>
-        <tr>
-            <th scope="row">Fingerstache</th>
-            <td>Kale</td>
-            <td>Chips</td>
-            <td>Keytar</td>
-        </tr>
-        <tr>
-            <th scope="row">Sriracha</th>
-            <td>Gluten-free</td>
-            <td>Ennui</td>
-            <td>Keffiyeh</td>
-        </tr>
-        <tr>
-            <th scope="row">Thundercats</th>
-            <td>Jean</td>
-            <td>Shorts</td>
-            <td>Biodiesel</td>
-        </tr>
-        <tr>
-            <th scope="row">Terry</th>
-            <td>Richardson</td>
-            <td>Swag</td>
-            <td>Blog</td>
-        </tr>
-        </table>
-        <p>It’s good to have information organized.</p>
-    </section>
+      #who .who__position-link {
+        background-image: none;
+      }
+    </style>
+  </section>
 
-    <section class="slide" id="picture">
-        <h2>Pictures</h2>
-        <figure>
-            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-            <figcaption class="copyright right white">
-                <a href="https://fiftyfootshadows.net">© John Carey</a>
-            </figcaption>
-        </figure>
-        <style>
-            #picture h2 {
-                color: white;
-            }
-        </style>
-    </section>
+  <section class="slide slide--htmlacademy" id="htmlacademy">
+    <figure class="htmlacademy__logo-wrapper">
+      <img src="pictures/htmlacademy-logo.svg" width="200" height="250" alt="Html academy logo">
+      <figcaption class="htmlacademy__logo-desc">
+        <a href="https://htmlacademy.ru/profile/whatislove" target="_blank" rel="noreferrer">HTMLAcademy</a>
+      </figcaption>
+    </figure>
 
-    <section class="slide">
-        <h2 class="shout shrink">You can even shout this way</h2>
-    </section>
+    <style>
+      #htmlacademy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-    <section class="slide">
-        <h2>Inner navigation</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
-    </section>
+      #htmlacademy .htmlacademy__logo-wrapper {
+        padding: 70px 0 0;
+      }
 
-    <section class="slide" id="see-more">
-        <h2 class="shout">
-            <img src="pictures/logo.svg" alt="Shower logo">
-            <a href="https://github.com/shower/shower">See more on GitHub</a>
-        </h2>
-        <style>
-            #see-more h2 {
-                font-size: 100px
-            }
+      #htmlacademy .htmlacademy__logo-desc {
+        text-align: center;
+      }
+    </style>
+  </section>
 
-            #see-more img {
-                width: 0.72em;
-                height: 0.72em;
-            }
-        </style>
-    </section>
+  <section class="slide slide--bs" id="regret">
+    <figure class="regret__wrapper">
+      <blockquote class="regret__quote-wrapper">
+        <p class="regret__quote">Sorry. I'm very sorry that this happened. This is completely my fault.</p>
+      </blockquote>
+      <figcaption class="regret__quote__origin">
+        Ryan Dahl, NodeJS & Deno creator
+      </figcaption>
+    </figure>
+    <a class="regret__link bottom-link" href="https://www.youtube.com/watch?v=M3BM9TB-8yA" target="_blank" rel="noreferrer">
+      10 Things I Regret About Node.js - Ryan Dahl - JSConf EU
+    </a>
+
+    <style>
+      #regret .regret__wrapper {
+        margin: 150px 0 0;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bs" id="history">
+    <h2>Server-Side JS History</h2>
+    <ul class="history__list next">
+      <li class="history__item next">
+        <a href="https://en.wikipedia.org/wiki/Node.js" target="_blank" rel="noreferrer">
+          <b>NodeJS</b>
+        </a>
+        <time class="history__item-date" datetime="2009-05-27T00:00:00+03:00">May 2009</time>
+      </li>
+      <li class="history__item next">
+        <a href="https://en.wikipedia.org/wiki/Node.js#History" target="_blank" rel="noreferrer">
+          <b>io.js</b>
+        </a>
+        <time class="history__item-date" datetime="2014-12-01T00:00:00+03:00">December 2014</time>
+      </li>
+      <li class="history__item next">
+        <a href="https://en.wikipedia.org/wiki/Node.js#History" target="_blank" rel="noreferrer">
+          <b>Reborn</b>
+        </a>
+        <time class="history__item-date" datetime="2015-08-08T00:00:00+03:00">September 2015</time>
+      </li>
+      <li class="history__item next">
+        <a href="https://www.youtube.com/watch?v=M3BM9TB-8yA" target="_blank" rel="noreferrer">
+          <b>10 Things. Ryan Dahl</b>
+        </a>
+        <time class="history__item-date" datetime="2018-05-13T00:00:00+03:00">May 2018</time>
+      </li>
+    </ul>
+
+    <style>
+      #history {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #history .history__list {
+        flex-grow: 1;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto 30px;
+        padding: 20px 0 30px;
+        list-style: none;
+      }
+
+      #history .history__list::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        content: '';
+        width: 2px;
+        height: 100%;
+        background-color: #000000;
+      }
+
+      #history .history__list::after {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96.154px' height='96.154px' viewBox='0 0 96.154 96.154'%3E%3Cpath d='M0.561,20.971l45.951,57.605c0.76,0.951,2.367,0.951,3.127,0l45.956-57.609c0.547-0.689,0.709-1.716,0.414-2.61 c-0.061-0.187-0.129-0.33-0.186-0.437c-0.351-0.65-1.025-1.056-1.765-1.056H2.093c-0.736,0-1.414,0.405-1.762,1.056 c-0.059,0.109-0.127,0.253-0.184,0.426C-0.15,19.251,0.011,20.28,0.561,20.971z'/%3E%3C/svg%3E%0A");
+        background-size: cover;
+      }
+
+      #history .history__item {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 30px;
+      }
+
+      #history .history__item::before {
+        display: none;
+      }
+
+      #history .history__item:nth-child(even) .history__item-date {
+        order: -1;
+      }
+
+    </style>
+  </section>
+
+  <section class="slide slide--bs" id="deno">
+    <h2 class="deno__title">Deno</h2>
+    <p>A <b>modern</b> runtime for <b>JavaScript</b> and <b>TypeScript</b>.</p>
+    <a class="deno__link" href="https://deno.land/" target="_blank" rel="noreferrer">
+      <img src="pictures/deno-logo.svg" width="150" height="150" alt="Deno logo">
+    </a>
+
+    <style>
+      #deno {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #deno .deno__title {
+        margin: 100px 0 0;
+        text-align: center;
+      }
+
+      #deno .deno__link {
+        background-image: none;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bs" id="first-reason">
+    <h2>Promises 🙏</h2>
+    <ul>
+      <li class="next">
+        <i>Added in June 2009 then removed in February 2010</i>
+      </li>
+      <li class="next">
+        <i>Promises are the necessary abstraction for <code>async/await</code></i>
+      </li>
+      <li class="next">
+        <i>Node would have sped the delivery of the eventual standardization (<code>async/await</code> and etc.)</i>
+      </li>
+      <li class="next">
+        <i>Today Node's many async APIs are aging baldly due to this</i>
+      </li>
+    </ul>
+    <style>
+      #first-reason code {
+        font-style: normal;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bs" id="second-reason">
+    <h2>Security 🔒</h2>
+    <ul>
+      <li class="next">
+        <i>Had I put more thought into how that could be maintained for certain applications, Node could have had some nice security</i>
+      </li>
+      <li class="next">
+        <i>Example: Your linter shouldn't get complete access to your computer and network</i>
+      </li>
+    </ul>
+  </section>
+
+  <section class="slide slide--bs" id="third-reason">
+    <h2>The Build System (GYP) 🧱</h2>
+    <ul>
+      <li class="next">
+        <i>V8 (via Chrome) started using GYP and I switched Node over in tow. Later Chrome dropped GYP for GN</i>
+      </li>
+      <li class="next">
+        <i>It's an awful experience for users. It's this non-JSON, Python adaptation of JSON</i>
+      </li>
+      <li class="next">
+        <i>The continued usage of GYP is the probably largest failure of Node core</i>
+      </li>
+      <li class="next">
+        <i>Instead of guiding users to write C++ bindings to V8, I should have provided a core foreign function interface (FFI)</i>
+      </li>
+    </ul>
+  </section>
+
+  <section class="slide slide--bs" id="fourth-reason">
+    <h2>package.json 📦</h2>
+    <ul>
+      <li class="next">
+        <i>Allowing Nod's <code>require()</code> to inspect package.json files for <code>main</code></i>
+      </li>
+      <li class="next">
+        <i>Ultimately I included NPM in the Node distribution</i>
+      </li>
+      <li class="next">
+        <i>This is nor a strictly necessary abstraction - and one that doesn't exist on the web</i>
+      </li>
+      <li class="next">
+        <i><code>package.json</code> now includes all sorts of unnecessary information. License? Repository? Description? It's boilerplate noise</i>
+      </li>
+    </ul>
+    <style>
+      #fourth-reason code {
+        font-style: normal;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bs" id="fifth-reason">
+    <h2>node_modules 🗑</h2>
+    <ul>
+      <li class="next">
+        <i>It massively complicates the module resolution algorithm</i>
+      </li>
+      <li class="next">
+        <i>Deviates greatly from browser semantics</i>
+      </li>
+      <li class="next">
+        <i>Unfortunately it's impossible to undo now</i>
+      </li>
+      <li class="next">
+        <u><i>It's my fault and I'm very sorry</i></u>
+      </li>
+    </ul>
+  </section>
+
+  <section class="slide slide--bs" id="sixth-reason">
+    <h2>require("module") without ".js" extension 🪝</h2>
+    <ul>
+      <li class="next">
+        <i>Why?</i> 😅
+      </li>
+      <li class="next">
+        <i>Not how browser JS works</i>
+      </li>
+      <li class="next">
+        <i>The module loader has to query the file system at multiple locations trying to guess what the user intended</i>
+      </li>
+    </ul>
+  </section>
+
+  <section class="slide slide--bs" id="seventh-reason">
+    <h2>index.js 🔑</h2>
+    <ul>
+      <li class="next">
+        <i>I thought it was cute, because there was index.html</i>
+      </li>
+      <li class="next">
+        <i>It needlessly complicated the module loading system</i>
+      </li>
+    </ul>
+  </section>
+
+  <section class="slide slide--bsa" id="thanks">
+    <h2>Thanks 🍓</h2>
+
+    <style>
+      #thanks {
+        display: grid;
+        place-content: center;
+      }
+    </style>
+  </section>
 
     <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+      <a href="https://github.com/shower/shower">Fork me on GitHub</a>
     </footer>
 
     <div class="progress"></div>
