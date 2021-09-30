@@ -261,21 +261,23 @@
 
   <section class="slide slide--bs" id="deno">
     <h2 class="deno__title">Deno</h2>
-    <p>A <b>modern</b> runtime for <b>JavaScript</b> and <b>TypeScript</b>.</p>
-    <a class="deno__link" href="https://deno.land/" target="_blank" rel="noreferrer">
-      <img src="pictures/deno-logo.svg" width="150" height="150" alt="Deno logo">
-    </a>
+    <div class="deno__wrapper next">
+      <p>A <b>modern</b> runtime for <b>JavaScript</b> and <b>TypeScript</b>.</p>
+      <a class="deno__link" href="https://deno.land/" target="_blank" rel="noreferrer">
+        <img src="pictures/deno-logo.svg" width="150" height="150" alt="Deno logo">
+      </a>
+    </div>
 
     <style>
-      #deno {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
       #deno .deno__title {
         margin: 100px 0 0;
         text-align: center;
+      }
+
+      #deno .deno__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       #deno .deno__link {
