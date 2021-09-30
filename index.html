@@ -609,6 +609,30 @@
     </style>
   </section>
 
+  <section class="slide slide--bsa" id="importmap">
+    <h2 class="importmap__title">Import Maps 🗺</h2>
+    <pre class="importmap__imports next">
+      <code>// server.ts</code>
+      <code>import { exists } from 'fs';</code>
+    </pre>
+    <pre class="importmap__main next">
+      <code>// import-map.json</code>
+      <code>{</code>
+      <code>  "import": {</code>
+      <code>    "fs": "https://deno.land/std@.99.1/fs/mod.ts"</code>
+      <code>  }</code>
+      <code>}</code>
+    </pre>
+    <a class="bottom-link" href="https://www.youtube.com/watch?v=SYkzk_j3yb0" target="_blank" rel="noreferrer">Import Maps</a>
+
+    <style>
+      #importmap .importmap__imports,
+      #importmap .importmap__main {
+        font-size: 20px;
+      }
+    </style>
+  </section>
+
   <section class="slide slide--bsa" id="thanks">
     <h2>Thanks 🍓</h2>
 
