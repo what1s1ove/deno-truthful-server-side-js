@@ -669,6 +669,109 @@
     <a class="bottom-link" href="https://deno.land/manual" target="_blank" rel="noreferrer">deno.land</a>
   </section>
 
+  <section class="slide slide--bs" id="front-back">
+    <h2 class="front-back__title">
+      <span>Front-end (Browser)</span>
+      <span>Back-end (Server)</span>
+    </h2>
+    <div class="front-back__wrapper">
+      <ul class="front-back__list next">
+        <li class="front-back__item">
+          <ul class="front-back__technologies">
+            <li class="front-back__technology">
+              <img src="pictures/js-logo.svg" width="70" height="70" alt="JS Logo">
+            </li>
+          </ul>
+        </li>
+        <li class="front-back__item">
+          <ul class="front-back__technologies">
+            <li class="front-back__technology">
+              <img src="pictures/python-logo.svg" width="70" height="70" alt="Python Logo">
+            </li>
+            <li class="front-back__technology">
+              <img src="pictures/ruby-logo.svg" width="70" height="70" alt="Ruby Logo">
+            </li>
+            <li class="front-back__technology">
+              <img src="pictures/php-logo.svg" width="100" alt="PHP Logo">
+            </li>
+            <li class="front-back__technology">
+              <img src="pictures/java-logo.svg" width="70" alt="Java Logo">
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p class="front-back__main next">
+        <img src="pictures/java-script-logo.svg" width="350" alt="Java Logo">
+      </p>
+    </div>
+
+    <style>
+      #front-back {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #front-back .front-back__title {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+      }
+
+      #front-back .front-back__wrapper {
+        position: relative;
+        flex-grow: 1;
+      }
+
+      #front-back .front-back__list {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        margin: 0;
+        height: inherit;
+      }
+
+      #front-back .front-back__item {
+        padding: 0 30px;
+      }
+
+      #front-back .front-back__list::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 60%;
+        content: '';
+        background-color: #000000;
+      }
+
+      #front-back .front-back__item::before {
+        display: none;
+      }
+
+      #front-back .front-back__technologies {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        margin: 0;
+      }
+
+      #front-back .front-back__technology::before {
+        display: none;
+      }
+
+      #front-back .front-back__main {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 50px 0 0;
+        background-color: #ffffff;
+      }
+    </style>
+  </section>
+
   <section class="slide slide--bs" id="deploy-title">
     <h2 class="deploy-title__title">Deploy 🚲</h2>
 
