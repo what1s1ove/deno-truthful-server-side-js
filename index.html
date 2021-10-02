@@ -795,6 +795,36 @@
     </ul>
   </section>
 
+  <section class="slide slide--bs" id="cjs">
+    <h2 class="cjs__title">CJS</h2>
+    <pre class="cjs__old next">
+      <code>// src/models/entity/entity.js</code>
+      <code>const Abstract = required('abstract')</code>
+      <code> </code>
+      <code>class Entity extends Abstract {};</code>
+      <code> </code>
+      <code>module.exports = Entity;</code>
+    </pre>
+
+    <pre class="cjs__new next">
+      <code>// src/models/entity/entity.js</code>
+      <code>// ...</code>
+      <code> </code>
+      <code>export default Entity;</code>
+    </pre>
+
+    <style>
+      #cjs .cjs__old,
+      #cjs .cjs__new {
+        font-size: 13px;
+      }
+
+      #cjs .cjs__old {
+        margin: 0 0 50px;
+      }
+    </style>
+  </section>
+
   <section class="slide slide--bs" id="deploy-title">
     <h2 class="deploy-title__title">Deploy 🚲</h2>
 
