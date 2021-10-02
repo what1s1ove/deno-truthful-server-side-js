@@ -587,6 +587,26 @@
     </style>
   </section>
 
+  <section class="slide slide--bs" id="wpt">
+    <h2 class="wpt__title">Web Platform Tests (WPT)</h2>
+    <a class="wpt__link next" href="https://github.com/web-platform-tests/wpt" target="_blank" rel="noreferrer">
+      <img class="wpt__img" src="pictures/wpt.png" width="200" height="200" alt="Wep Platform Test logo">
+    </a>
+    <a class="bottom-link" href="https://deno.com/blog/deno-on-mdn/" target="_blank" rel="noreferrer">Deno on MDN</a>
+
+    <style>
+      #wpt .wpt__title {
+        margin-bottom: 100px;
+      }
+
+      #wpt .wpt__link {
+        display: flex;
+        justify-content: center;
+        background-image: none;
+      }
+    </style>
+  </section>
+
   <section class="slide slide--bs" id="nobody">
     <h2 class="nobody__title">Nobody likes this:</h2>
     <p class="nobody__example next">
@@ -647,6 +667,211 @@
       </li>
     </ul>
     <a class="bottom-link" href="https://deno.land/manual" target="_blank" rel="noreferrer">deno.land</a>
+  </section>
+
+  <section class="slide slide--bs" id="front-back">
+    <h2 class="front-back__title">
+      <span>Front-end (Browser)</span>
+      <span>Back-end (Server)</span>
+    </h2>
+    <div class="front-back__wrapper">
+      <ul class="front-back__list next">
+        <li class="front-back__item">
+          <ul class="front-back__technologies">
+            <li class="front-back__technology">
+              <img src="pictures/js-logo.svg" width="70" height="70" alt="JS Logo">
+            </li>
+          </ul>
+        </li>
+        <li class="front-back__item">
+          <ul class="front-back__technologies">
+            <li class="front-back__technology">
+              <img src="pictures/python-logo.svg" width="70" height="70" alt="Python Logo">
+            </li>
+            <li class="front-back__technology">
+              <img src="pictures/ruby-logo.svg" width="70" height="70" alt="Ruby Logo">
+            </li>
+            <li class="front-back__technology">
+              <img src="pictures/php-logo.svg" width="100" alt="PHP Logo">
+            </li>
+            <li class="front-back__technology">
+              <img src="pictures/java-logo.svg" width="70" alt="Java Logo">
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p class="front-back__main next">
+        <img src="pictures/java-script-logo.svg" width="350" alt="Java Logo">
+      </p>
+    </div>
+
+    <style>
+      #front-back {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #front-back .front-back__title {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+      }
+
+      #front-back .front-back__wrapper {
+        position: relative;
+        flex-grow: 1;
+      }
+
+      #front-back .front-back__list {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        margin: 0;
+        height: inherit;
+      }
+
+      #front-back .front-back__item {
+        padding: 0 30px;
+      }
+
+      #front-back .front-back__list::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 60%;
+        content: '';
+        background-color: #000000;
+      }
+
+      #front-back .front-back__item::before {
+        display: none;
+      }
+
+      #front-back .front-back__technologies {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        margin: 0;
+      }
+
+      #front-back .front-back__technology::before {
+        display: none;
+      }
+
+      #front-back .front-back__main {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 50px 0 0;
+        background-color: #ffffff;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bs" id="everywhere">
+    <h2 class="everywhere__title">JS is everywhere</h2>
+    <ul class="everywhere__list next">
+      <li class="everywhere__item">📱</li>
+      <li class="everywhere__item next">❄️📦</li>
+      <li class="everywhere__item next">NGINX (.njs)</li>
+      <li class="everywhere__item next">Google App Script (.gs)</li>
+      <li class="everywhere__item next">AppleScript (Scriptable)</li>
+      <li class="everywhere__item next">Cloudflare CDN Workers</li>
+      <li class="everywhere__item next">PDF 📑</li>
+    </ul>
+    <a class="bottom-link" href="https://www.youtube.com/watch?v=GfD-MYaWjIU" target="_blank" rel="noreferrer">Everywhere is undefined / Anton Verinov / fwdays</a>
+  </section>
+
+  <section class="slide slide--bs" id="web">
+    <h2 class="web__title">Web Platform 🕸</h2>
+    <ul class="web__list  next">
+      <li class="web__item">Web <span class="next">(HTML, CSS, JavaScript, SVG & DOM, Console, Fetch, etc.)</span></li>
+      <li class="web__item next">Standards</li>
+      <li class="web__item next">Specifications <span class="next">(W3C, WHATWG, Ecma International, OpenJS Foundation, etc.)</span></li>
+    </ul>
+  </section>
+
+  <section class="slide slide--bs" id="cjs">
+    <h2 class="cjs__title">CJS</h2>
+    <pre class="cjs__old next">
+      <code>// src/models/entity/entity.js</code>
+      <code>const Abstract = required('abstract')</code>
+      <code> </code>
+      <code>class Entity extends Abstract {};</code>
+      <code> </code>
+      <code>module.exports = Entity;</code>
+    </pre>
+
+    <pre class="cjs__new next">
+      <code>// src/models/entity/entity.js</code>
+      <code>// ...</code>
+      <code> </code>
+      <code>export default Entity;</code>
+    </pre>
+
+    <style>
+      #cjs .cjs__old,
+      #cjs .cjs__new {
+        font-size: 13px;
+      }
+
+      #cjs .cjs__old {
+        margin: 0 0 50px;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bs" id="later">
+    <h2 class="later__title">It's never too late ✊</h2>
+    <img class="later__img next" src="pictures/node-fetch.png" width="600" alt="Node Issue">
+    <a class="bottom-link" href="https://github.com/nodejs/node/issues/19393" target="_blank" rel="noreferrer">Implement window.fetch into core</a>
+
+    <style>
+      #later .later__img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bs" id="deploy-title">
+    <h2 class="deploy-title__title">Deploy 🚲</h2>
+
+    <style>
+      #deploy-title {
+        display: grid;
+        place-content: center;
+      }
+
+      #deploy-title .deploy-title__title {
+        margin: 0 0 75px;
+        font-size: 80px;
+        line-height: 1;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bs" id="deploy">
+    <h2 class="deploy__title">Deploy 🚲</h2>
+    <video class="deploy__video next" src="https://deno.com/deploy-beta1/deploy_preview_speed.mp4" width="550" autoplay muted loop playsinline></video>
+    <a class="bottom-link" href="https://deno.com/deploy/" target="_blank" rel="noreferrer">Deno Deploy</a>
+
+    <style>
+      #deploy .deploy__video {
+        margin: 0 0 75px;
+        font-size: 80px;
+        line-height: 1;
+      }
+
+      #deploy .deploy__video {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
   </section>
 
   <section class="slide slide--bs" id="thanks">
